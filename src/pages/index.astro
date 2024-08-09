@@ -1,0 +1,337 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import "../../node_modules/animate.css/animate.css";
+---
+
+<Layout
+  title="Taller bugatti"
+  descripcion="Nuestro taller está dedicado a proporcionar servicios de alta calidad con un enfoque en la satisfacción del cliente y la excelencia técnica."
+>
+  <main>
+    <section class="banner flex justify-center items-center gap-16 bg-grid">
+      <div class="w-2/5 text-center">
+        <h1 class="my-3 animate__animated animate__rubberBand">
+          <span class="text-gradient">Taller</span> Profesional
+        </h1>
+        <p class="my-3">
+          <i
+            >Tu destino confiable para todas las necesidades mecánicas de tu
+            vehículo.</i
+          >
+          <br /> Nuestro taller está dedicado a proporcionar servicios de alta calidad
+          con un enfoque en la satisfacción del cliente y la excelencia técnica.
+        </p>
+        <button
+          id="boton-reserva"
+          type="button"
+          class="text-white
+          bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600
+          hover:bg-gradient-to-br
+          focus:ring-4
+          focus:outline-none
+          focus:ring-yellow-300
+          dark:focus:ring-yellow-800
+          shadow-lg
+          shadow-yellow-500/50
+          dark:shadow-lg
+          dark:shadow-yellow-800/80
+          font-medium
+          rounded-lg
+          text-sm
+          px-5
+          py-2.5
+          text-center
+          me-2
+          mb-2"
+          >Reserva tu espacio</button
+        >
+      </div>
+      <div class="w-2/5">
+        <img
+          src="/img/banner.webp"
+          alt="imagen"
+          class="w-full h-auto banner-img"
+        />
+      </div>
+    </section>
+    <section id="servicios" class="servicios my-6 justify-center items-center">
+      <h2>Nuestros Servicios</h2>
+      <div class="flex gap-16 my-6 p-3">
+        <Card title="Servicios integrales" src="./img/settings.webp" />
+        <Card title="Mecanica automotriz en general" src="/img/car-service.webp" />
+        <Card title="Servicio mecánica industrial" src="/img/mechanic.webp" />
+      </div>
+      
+    </section>
+    <section id="reserva">
+      <h2 class="my-3">Reserva tú espacio</h2>
+      <div class="flex bg-white p-10 justify-center rounded">
+        <form class="w-full max-w-lg">
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="nombre"
+              >
+                Razón Social/Nombre
+              </label>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                name="nombre"
+                id="nombre"
+                type="text"
+                placeholder="Nombre"
+              />
+            </div>
+            <div class="w-full md:w-1/2 px-3">
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="documento"
+              >
+                NIT/C.I.
+              </label>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="documento"
+                id="documento"
+                type="text"
+                placeholder="1234567"
+              />
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="Marca"
+              >
+                Marca
+              </label>
+              <select
+                class="block w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="marca"
+                name="marca"
+                >
+                <option value="0"
+                  >Selecciona una marca
+                </option>
+                <option value="1"
+                  >Abarth
+                </option>
+                <option value="2"
+                  >Alfa Romeo
+                </option>
+                <option value="3">Aro</option>
+                <option value="4">Asia</option>
+                <option value="5">Asia Motors</option>
+                <option value="6">Aston Martin</option>
+                <option value="7">Audi</option>
+                <option value="8">Austin</option>
+                <option value="9">Auverland</option>
+                <option value="10">Bentley</option>
+                <option value="11">Bertone</option>
+                <option value="12">Bmw</option>
+                <option value="13">Cadillac</option>
+                <option value="14">Chevrolet</option>
+                <option value="15">Chrysler</option>
+                <option value="16">Citroen</option>
+                <option value="17">Corvette</option>
+                <option value="18">Dacia</option>
+                <option value="19">Daewoo</option>
+                <option value="20">Daf</option>
+                <option value="21">Daihatsu</option>
+                <option value="22">Daimler</option>
+                <option value="23">Dodge</option>
+                <option value="24">Ferrari</option>
+                <option value="25">Fiat</option>
+                <option value="26">Ford</option>
+                <option value="27">Galloper</option>
+                <option value="28">Gmc</option>
+                <option value="29">Honda</option>
+                <option value="30">Hummer</option>
+                <option value="31">Hyundai</option>
+                <option value="32">Infiniti</option>
+                <option value="33">Innocenti</option>
+                <option value="34">Isuzu</option>
+                <option value="35">Iveco</option>
+                <option value="36">Iveco-pegaso</option>
+                <option value="37">Jaguar</option>
+                <option value="38">Jeep</option>
+                <option value="39">Kia</option>
+                <option value="40">Lada</option>
+                <option value="41">Lamborghini</option>
+                <option value="42">Lancia</option>
+                <option value="43">Land-rover</option>
+                <option value="44">Ldv</option>
+                <option value="45">Lexus</option>
+                <option value="46">Lotus</option>
+                <option value="47">Mahindra</option>
+                <option value="48">Maserati</option>
+                <option value="49">Maybach</option>
+                <option value="50">Mazda</option>
+                <option value="51">Mercedes-benz</option>
+                <option value="52">Mg</option>
+                <option value="53">Mini</option>
+                <option value="54">Mitsubishi</option>
+                <option value="55">Morgan</option>
+                <option value="56">Nissan</option>
+                <option value="57">Opel</option>
+                <option value="58">Peugeot</option>
+                <option value="59">Pontiac</option>
+                <option value="60">Porsche</option>
+                <option value="61">Renault</option>
+                <option value="62">Rolls-royce</option>
+                <option value="63">Rover</option>
+                <option value="64">Saab</option>
+                <option value="65">Santana</option>
+                <option value="66">Seat</option>
+                <option value="67">Skoda</option>
+                <option value="68">Smart</option>
+                <option value="69">Ssangyong</option>
+                <option value="70">Subaru</option>
+                <option value="71">Suzuki</option>
+                <option value="72">Talbot</option>
+                <option value="73">Tata</option>
+                <option value="74">Toyota</option>
+                <option value="75">Umm</option>
+                <option value="76">Vaz</option>
+                <option value="77">Volkswagen</option>
+                <option value="78">Volvo</option>
+                <option value="79">Wartburg</option>
+              </select>
+            </div>
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="modelo"
+              >
+                Modelo
+              </label>
+              <select
+                class="block w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="modelo"
+                name="modelo"
+              >
+              </select>
+            </div>
+          </div>
+          <div class="flex flex-wrap -mx-3 mb-6">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="año"
+              >
+                Año
+              </label>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                name="año"
+                id="año"
+                type="number"
+                placeholder="2018"
+              />
+            </div>
+            <div class="w-full md:w-1/2 px-3">
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="falla"
+              >
+                Descripción de la falla
+              </label>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                name="falla"
+                id="falla"
+                type="text"
+                placeholder="Mensaje"
+              />
+            </div>
+          </div>
+          <button
+            type="button"
+            id="boton"
+            class="text-white
+            bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600
+            hover:bg-gradient-to-br
+            focus:ring-4
+            focus:outline-none
+            focus:ring-yellow-300
+            dark:focus:ring-yellow-800
+            shadow-lg
+            shadow-yellow-500/50
+            dark:shadow-lg
+            dark:shadow-yellow-800/80
+            font-medium
+            rounded-lg
+            text-sm
+            px-5
+            py-2.5
+            text-center
+            me-2
+            mb-2"
+            >Enviar</button
+          >
+        </form>
+      </div>
+    </section>
+    <section id="contacto">
+      <h2 class="my-3">Encuentranos</h2>
+      <div class="flex justify-center">
+        <a href="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-facebook"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ffffff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+            ></path>
+          </svg>
+        </a>
+        <a href="">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-instagram"
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ffffff"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+            ></path>
+            <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+            <path d="M16.5 7.5l0 .01"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="flex m-3 justify-center" id="map-container">
+        <iframe
+          title="Mapa Ubicación"
+          width="600"
+          height="450"
+          style="border:0"
+          loading="lazy"
+          allowfullscreen
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB_ByrKr-Q_eQ3IXE4Ea42OghW6-ybr59c&q=0,0"
+        >
+        </iframe>
+      </div>
+    </section>
+  </main>
+</Layout>
+<script src="../pages/script.js"></script>

@@ -1,0 +1,177 @@
+---
+interface Props {
+	title: string;
+	descripcion: string;
+}
+
+const { title, descripcion } = Astro.props;
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BtnWhatsApp from '../components/Btn-WhatsApp.astro';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={descripcion} />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="keywords" content="taller, tallerbugatti, taller santa cruz, taller banzer">
+		<meta name="robots" content="index, follow">
+		<meta http-equiv="Content-Language" content="es">
+		<link rel="icon" type="image" href="/img/logo_gse.webp" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<Header/>
+	<body>
+		<slot />
+	</body>
+	<BtnWhatsApp/>
+	<Footer/>
+</html>
+<style is:global>
+	
+	:root {
+		--accent-gradient: linear-gradient(
+		45deg,
+		#ffb901,
+		#fae37d 60%,
+		white 40%
+		);
+
+	}
+	html {
+		font-family: obviously, sans-serif;
+		background: #023374;
+		background-size: 224px;
+		color-scheme: dark;
+		scroll-behavior: smooth;
+		scroll-padding: 5px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+	main {
+		margin: auto;
+		max-width: 100%;
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+	}
+	.bg-grid {
+		background-size: 100px 100px;
+		z-index: -2;
+		background-image: url(../img/bg-grid.png);
+		background-position-y: -9px;
+		mask-image: linear-gradient(to top, transparent, 10%, white, 100%, transparent);
+    }
+	.banner {
+		height: 450px;
+	}
+	.banner-img {
+		height: 450px;
+		object-fit: cover;
+	}
+	h2 {
+		text-align: center;
+		font-size: 2rem;
+	}
+	.formulario {
+		div {
+			background-color: rgb(255, 255, 255);
+			color: black;
+			border-radius: 5px;
+			text-align: -webkit-center;
+			padding: 10px;
+			width: 33%;
+		}
+	}
+	#map {
+		width: 500px;
+		height: 500px;
+		border-radius: 20px;
+	}
+	footer{
+		font-size: 14px;
+		color: white;
+		background-color: #292929;
+		padding-bottom: 18px;
+		padding-top: 18px;
+	}
+	footer a {
+		text-decoration: none!important;
+	}
+	.float {
+		padding: 5px;
+		position: fixed;
+		width: 50px;
+		height: 50px;
+		bottom: 10px;
+		left: 20px;
+		background-color: #25d366;
+		border-radius: 50px;
+		text-align: center;
+		box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+	}
+	@media only screen and (max-width: 768px) {
+		h1 {
+			font-size: 55px;
+		}
+		.banner {
+			height: auto;
+			display: grid;
+			padding: 10px;
+		}
+		.banner div {
+			width: auto;
+		}
+		.banner-img {
+			height: 200px;
+		}
+		#servicios div {
+			display: grid;
+			gap: 10px;
+		}
+		#servicios div div {
+			width: 100%;
+			justify-items: center;
+		}
+	}
+</style>
