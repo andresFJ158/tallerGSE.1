@@ -31,7 +31,7 @@ function enviarFormulario() {
     const mensajeCodificado = encodeURIComponent(mensaje);
 
     // Abre WhatsApp con el mensaje prellenado
-    window.open(`https://api.whatsapp.com/send?phone=59160854979&text=${mensajeCodificado}`);
+    window.open(`https://api.whatsapp.com/send?phone=59172100031&text=${mensajeCodificado}`);
 }
 const models = {
     1: ["500", "Grande Punto", "Punto Evo", "500c", "695", "Punto"],
